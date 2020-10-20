@@ -1,0 +1,21 @@
+@import 'variables.scss';
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: $theme-color;
+  margin: 0 auto;
+  padding: 8px 5%;
+}
+
+.header {
+  &-logo {
+    font: bold 24px "Bangla MN";
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    vertical-align: text-top;
+  }
+}
