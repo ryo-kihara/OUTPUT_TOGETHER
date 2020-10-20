@@ -1,0 +1,23 @@
+<div class="login-info">
+  <div class="login-info-wrapper">
+    <p class="login-info-title login-info-title-first">メールアドレス</p>
+    <input type="text" class="login-info-input">
+    <p class="login-info-title">パスワード</p>
+    <input type="text" class="login-info-input">
+    <div class="login-info-btn-wrapper">
+      <button type="submit" class="login-info-btn">ログイン</button>
+    </div>
+    <%= link_to 'アカウントをお持ちですか？', '/login', class: 'login-info-link' %>
+  </div>
+  <div class="login-info-wrapper">
+    <p class="login-info-title-social login-info-title-first">外部サービスと連携してログイン</p>
+    <%= link_to '', class: 'login-info-social-link' do %>
+      <img alt="Google" src="/assets/login/google.png" class="login-info-img" />
+      <span class="login-info-social-link-txt">Sign in with Google</span>
+    <% end %>
+    <%= link_to '', class: 'login-info-social-link' do %>
+      <img alt="Google" src="/assets/login/twitter.png" class="login-info-img" />
+      <span class="login-info-social-link-txt">Sign in with Twitter</span>
+    <% end %>
+  </div>
+</div>
