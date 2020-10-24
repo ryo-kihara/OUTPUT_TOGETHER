@@ -26,9 +26,13 @@ header {
 }
 
 .container {
+  &-fluid {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
   &-wrapper {
-    position: absolute;
-    top: 90px;
+    margin-top: 90px;
+    margin-bottom: 140px;
   }
 }
 
