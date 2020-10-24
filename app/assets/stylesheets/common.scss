@@ -24,9 +24,11 @@ header {
   }
 }
 
-main {
-  position: relative;
-  top: 64px;
+.container {
+  &-wrapper {
+    position: absolute;
+    top: 63px;
+  }
 }
 
 footer {
