@@ -12,6 +12,7 @@ header {
   background-color: $theme-color;
   padding: 8px 5%;
   position: fixed;
+  z-index: 1;
 }
 
 .header {
@@ -27,7 +28,7 @@ header {
 .container {
   &-wrapper {
     position: absolute;
-    top: 63px;
+    top: 90px;
   }
 }
 
