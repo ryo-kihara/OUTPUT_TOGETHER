@@ -2,12 +2,17 @@
 
 body {
   margin: 0;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 header {
+  width: 100%;
   background-color: $theme-color;
-  margin: 0 auto;
   padding: 8px 5%;
+  position: fixed;
+  z-index: 1;
 }
 
 .header {
@@ -17,5 +22,31 @@ header {
     text-decoration: none;
     color: #fff;
     vertical-align: text-top;
+  }
+}
+
+.container {
+  &-fluid {
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+  &-wrapper {
+    margin-top: 90px;
+    margin-bottom: 140px;
+  }
+}
+
+footer {
+  background-color: $theme-color;
+  margin-top: auto;
+}
+
+.footer {
+  &-text {
+    font: bold 18px "Bangla MN";
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 4px;
   }
 }

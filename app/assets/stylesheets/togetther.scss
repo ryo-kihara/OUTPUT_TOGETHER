@@ -1,3 +1,154 @@
-// Place all the styles related to the togetther controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'variables.scss';
+
+.section {
+  &-hr {
+    margin: 0;
+  }
+  &-hashtag,
+  &-rank {
+    margin-top: 30px;
+  }
+}
+
+.hashtag {
+  &-content {
+    display: block;
+    align-items: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: $default-color;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &:hover {
+      text-decoration: none;
+      color: $theme-color;
+    }
+  }
+  &-arrow {
+    position: absolute;
+    right: 20px;
+    margin-top: 2px;
+    font-size: 20px;
+  }
+}
+
+.main {
+  &-contents {
+    display: flex;
+    padding: 10px;
+    border: 1px solid $default-border;
+    &:hover {
+      background-color:rgba($color: $theme-color, $alpha: 0.1);
+    }
+    &:not(:last-of-type) {
+      border-bottom: none;
+    }
+    &-sort {
+      display: flex;
+      &-title {
+        width: 55px;
+        text-align: center;
+        margin-left: 16px;
+        font-size: 20px;
+        color: $default-color;
+        &:hover {
+          text-decoration: none;
+          color: $theme-color;
+        }
+        &.selected {
+          color: $theme-color;
+          border-bottom: 2px solid $theme-color;
+        }
+      }
+    }
+    &-user {
+      &-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &-wrapper {
+          margin-right: 10px;
+        }
+      }
+      &-name {
+        margin: 0;
+        font-size: 18px;
+        color: black;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      vertical-align: middle;
+      align-items: center;
+    }
+    &-info {
+      width: 100%;
+    }
+    &-hashtag {
+      color: $default-color;
+      border: 1px solid $default-border;
+      border-radius: 20px;
+      padding: 2px 30px;
+      &:hover {
+        background-color: $theme-color;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid $theme-color;
+      }
+    }
+    &-content {
+      color: black;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    &-heart {
+      color: $heart-color;
+    }
+    &-comment {
+      margin-left: 10px;
+      color: $comment-color;
+    }
+    &-count {
+      margin-top: 2px;
+    }
+  }
+}
+
+.rank {
+  &-heart {
+    color: $heart-color;
+  }
+  &-number {
+    padding-right: 6px;
+  }
+  &-count {
+    float: right;
+  }
+  &-comment {
+    color: $comment-color;
+  }
+  &-user {
+    vertical-align: middle;
+    color: $default-color;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    &-name {
+      color: $default-color;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    &-last {
+      padding-left: 5px;
+    }
+  }
+}

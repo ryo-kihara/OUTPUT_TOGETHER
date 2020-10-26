@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
 
   <body>
@@ -14,6 +16,14 @@
       <a href="" class="header-logo">Togetther</a>
     </header>
 
-    <%= yield %>
+    <div class="container-fluid container-wrapper">
+      <div class="row">
+        <%= yield %>
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer-text">@togetther.inc</p>
+    </footer>
   </body>
 </html>
