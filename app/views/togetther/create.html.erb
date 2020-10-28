@@ -1,0 +1,38 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'create' %>
+<% end %>
+
+<div class="col-2">
+  <%= render :partial => "side_hashtag" %>
+</div>
+
+<div class="col-7">
+  <section class="section">
+    <div class="main-contents-title-wrapper">
+      <span class="main-contents-title">投稿する</span>
+    </div>
+    <div class="main-contents-wrapper">
+      <div class="main-contents">
+        <form action="">
+          <p class="main-contents-form-title">ハッシュタグ</p>
+          <select name="hashtag" class="main-contents-form-select">
+            <option value="1">食事</option>
+            <option value="2">スポーツ</option>
+            <option value="3">音楽</option>
+            <option value="4">ファッション</option>
+            <option value="5">お酒</option>
+            <option value="6">旅行</option>
+            <option value="7">学習</option>
+          </select>
+          <p class="main-contents-form-title">今なにしてる？</p>
+          <textarea class="main-contents-form-textarea" rows="8" placeholder="今なにしてるかつぶやいてみよう"></textarea>
+          <button type="submit" class="main-contents-form-btn">投稿する</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="col-3">
+  <%= render :partial => "side_rank" %>
+</div>

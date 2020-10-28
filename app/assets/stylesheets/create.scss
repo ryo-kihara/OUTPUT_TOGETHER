@@ -1,3 +1,58 @@
 @import 'variables';
 @import 'side_hashtag';
 @import 'side_rank';
+
+.main {
+  &-contents {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 28px;
+    &-title {
+      font-size: 20px;
+      color: $theme-color;
+      margin-left: 20px;
+      margin-bottom: 8px;
+    }
+    &-wrapper {
+      border: 1px solid $default-border;
+    }
+    &-form {
+      &-title {
+        font-size: 20px;
+      }
+      &-select {
+        width: 100%;
+        padding: 16px 10px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+      &-textarea {
+        width: 100%;
+        resize: none;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 12px 14px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+      &-btn {
+        display: block;
+        width: 150px;
+        margin-left: auto;
+        padding: 12px 20px;
+        border: none;
+        color: #fff;
+        background-color: $theme-color;
+        border-radius: 10px;
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
