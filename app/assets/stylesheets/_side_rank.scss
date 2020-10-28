@@ -1,0 +1,36 @@
+@import 'variables';
+
+.rank {
+  &-heart {
+    color: $heart-color;
+  }
+  &-number {
+    padding-right: 6px;
+  }
+  &-count {
+    float: right;
+  }
+  &-comment {
+    color: $comment-color;
+  }
+  &-user {
+    vertical-align: middle;
+    color: $default-color;
+    padding: 8px 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    &-name {
+      color: $default-color;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    &-last {
+      padding-left: 5px;
+    }
+  }
+}
