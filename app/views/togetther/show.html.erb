@@ -1,0 +1,81 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'show' %>
+<% end %>
+
+<div class="col-2">
+  <%= render :partial => "side_hashtag" %>
+</div>
+
+<div class="col-7">
+  <section class="section">
+    <div class="main-contents-title-wrapper">
+      <span class="main-contents-title">〇〇さんの投稿</span>
+    </div>
+    <div class="main-contents-wrapper">
+      <div class="main-contents">
+        <div class="main-contents-post-info">
+          <div class="main-contents-user-icon-wrapper">
+            <a href="" class="main-contents-user">
+              <img src="/assets/icon/user.png" alt="" class="main-contents-user-icon">
+            </a>
+          </div>
+          <div class="main-contents-info-wrapper">
+            <div class="main-contents-info">
+              <a href="" class="main-contents-info-user-name">ユーザー名</a>
+              <span class="main-contents-info-date">2020-10-13 21:00:12</span>
+              <div class="main-contents-info-hashtag-wrapper">
+                <a href="" class="main-contents-info-hashtag"># 食事</a>
+                <a href="" class="main-contents-info-hashtag"># 食事</a>
+              </div>
+            </div>
+          </div>
+          <button class="main-contents-trust-btn">
+            <i class="fas fa-trash-alt main-contents-trust"></i>
+          </button>
+        </div>
+        <div class="main-contents-content">
+          こんにちは。お腹空きました。ご飯いきましょう。
+        </div>
+        <div class="main-contents-heart-wrapper">
+          <i class="far fa-heart main-contents-heart"></i> 90
+        </div>
+        <div class="main-contents-comment-wrapper">
+          <div class="main-contents-comment">
+            <div class="main-contents-comment-user-icon-wrapper">
+              <a href="" class="main-contents-user">
+                <img src="/assets/icon/user.png" alt="" class="main-contents-user-icon">
+              </a>
+            </div>
+            <div class="main-contents-comment-info">
+              <a href="" class="main-contents-comment-user-name">ユーザー名</a>
+              <span class="main-contents-comment-date">2020-10-13 21:00:12</span>
+              <p class="main-contents-comment-content">渋谷でいいお店知ってます！</p>
+            </div>
+          </div>
+          <div class="main-contents-comment">
+            <div class="main-contents-comment-user-icon-wrapper">
+              <a href="" class="main-contents-user">
+                <img src="/assets/icon/user.png" alt="" class="main-contents-user-icon">
+              </a>
+            </div>
+            <div class="main-contents-comment-info">
+              <a href="" class="main-contents-comment-user-name">ユーザー名</a>
+              <span class="main-contents-comment-date">2020-10-13 21:00:12</span>
+              <p class="main-contents-comment-content">渋谷でいいお店知ってます！</p>
+            </div>
+          </div>
+        </div>
+        <form action="">
+          <div class="main-contents-comment-post-wrapper">
+            <input class="main-contents-comment-post-input" type="text" placeholder="コメントしてみましょう">
+            <button class="main-contents-comment-post-btn" type="submit">送信</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="col-3">
+  <%= render :partial => "side_rank" %>
+</div>
