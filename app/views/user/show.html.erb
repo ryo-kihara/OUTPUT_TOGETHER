@@ -14,7 +14,7 @@
       </a>
       <a href="" class="user-info-link user-info-name-link">ユーザー名</a>
     </div>
-    <button class="user-info-update-btn">ユーザー情報変更</button>
+    <button id="user_update_btn" class="user-info-update-btn" data-toggle="modal" data-target="#user_update_modal">ユーザー情報変更</button>
     <div class="user-info-count">
       <p class="user-info-count-post">投稿数：2</p>
       <p class="user-info-count-like">いいね数：2</p>
@@ -256,6 +256,37 @@
           </div>
           <span class="user-main-date">2020-10-13 21:00:12</span>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ユーザー情報更新モーダル -->
+<div class="modal fade" id="user_update_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ユーザー情報更新</h5>
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-user-img-wrapper">
+          <img src="/assets/icon/user.png" alt="" class="modal-user-img">
+          <label class="modal-user-img-label" for="update_avatar">
+            <input type="file" name="" id="update_avatar" class="modal-user-img-input">
+            画像を選択する
+          </label>
+        </div>
+        <div class="modal-user-name-wrapper">
+          <p class="modal-user-name-title">ユーザー名を変更する</p>
+          <input type="text" name="name" value="木原凌" class="modal-user-name-input">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn modal-close-btn" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn modal-update-btn">更新する</button>
       </div>
     </div>
   </div>

@@ -45,6 +45,9 @@
           background-color: $theme-color;
           color: #fff;
         }
+        &:focus {
+          outline: none;
+        }
       }
     }
     &-count {
@@ -145,6 +148,80 @@
       & *:not(:first-of-type) {
         margin-left: 10px;
       }
+    }
+  }
+}
+
+.modal {
+  &-user {
+    &-img {
+      width: 100px;
+      &-wrapper {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+      }
+      &-input {
+        display: none;
+      }
+      &-label {
+        margin-top: 10px;
+        padding: 5px 40px;
+        border: 1px solid $default-border;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          transition: 0.2s;
+          background-color: $theme-color;
+          color: #fff;
+          border: 1px solid $theme-color;
+        }
+      }
+    }
+    &-name {
+      &-wrapper {
+        margin-top: 20px;
+      }
+      &-title {
+        margin-bottom: 5px;
+      }
+      &-input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid $default-border;
+        border-radius: 8px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+    }
+  }
+  &-close {
+    &-btn {
+      background-color: $default-border;
+      color: #fff;
+      &:hover {
+        transition: 0.4s;
+        color: #fff;
+        filter: brightness(90%);
+      }
+    }
+  }
+  &-update {
+    &-btn {
+      background-color: $theme-color;
+      color: #fff;
+      &:hover {
+        transition: 0.4s;
+        color: #fff;
+        filter: brightness(90%);
+      }
+    }
+  }
+  &-close {
+    &:focus {
+      outline: none;
     }
   }
 }
