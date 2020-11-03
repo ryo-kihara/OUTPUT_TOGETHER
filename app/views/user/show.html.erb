@@ -1,0 +1,331 @@
+<% content_for :css do %>
+  <%= stylesheet_link_tag 'user/show' %>
+<% end %>
+
+<% content_for :js do %>
+  <%= javascript_include_tag 'user/show' %>
+<% end %>
+
+<div class="col-3">
+  <div class="user-info-wrapper">
+    <div class="user-info">
+      <a href="" class="user-info-link user-info-avatar-link">
+        <img src="/assets/icon/user.png" alt="" class="user-info-avatar">
+      </a>
+      <a href="" class="user-info-link user-info-name-link">ユーザー名</a>
+    </div>
+    <button id="user_update_btn" class="user-info-update-btn" data-toggle="modal" data-target="#user_update_modal">ユーザー情報変更</button>
+    <div class="user-info-count">
+      <p class="user-info-count-post">投稿数：2</p>
+      <p class="user-info-count-like">いいね数：2</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-9">
+  <div class="user-main-wrapper">
+    <div class="user-main-filter">
+        <a href="" class="user-main-filter-title selected">投稿</a>
+        <a href="" class="user-main-filter-title">いいね</a>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <button id="tweet_update_btn" class="user-main-edit-btn" data-toggle="modal" data-target="#tweet_update_modal">
+              <i class="fas fa-pencil-alt user-main-edit"></i>
+            </button>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+    <div class="user-main">
+      <div class="user-main-user-icon-wrapper">
+        <a href="" class="user-main-user">
+          <img src="/assets/icon/user.png" alt="" class="user-main-user-icon">
+        </a>
+      </div>
+      <div class="user-main-info">
+        <div class="user-main-row">
+          <a href="" class="user-main-user-name">ユーザー名</a>
+          <a href="" class="user-main-hashtag"># 食事</a>
+        </div>
+        <a href="" class="user-main-content">こんにちは。お腹すきました。ご飯いきましょう。</a>
+        <div class="user-main-row">
+          <div class="user-main-count">
+            <i class="far fa-heart user-main-heart"></i> 12
+            <i class="far fa-comment-alt user-main-comment"></i> 12
+            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <i class="fas fa-trash-alt user-main-trust"></i>
+          </div>
+          <span class="user-main-date">2020-10-13 21:00:12</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ユーザー情報更新モーダル -->
+<div class="modal fade" id="user_update_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">ユーザー情報更新</h5>
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-user-img-wrapper">
+          <img src="/assets/icon/user.png" alt="" class="modal-user-img">
+          <label class="modal-user-img-label" for="update_avatar">
+            <input type="file" name="" id="update_avatar" class="modal-user-img-input">
+            画像を選択する
+          </label>
+        </div>
+        <div class="modal-user-name-wrapper">
+          <p class="modal-user-name-title">ユーザー名を変更する</p>
+          <input type="text" name="name" value="木原凌" class="modal-user-name-input">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn modal-close-btn" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn modal-update-btn">更新する</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ユーザー情報更新モーダル -->
+<div class="modal fade" id="tweet_update_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">投稿内容更新</h5>
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tweet-wrapper">
+          <form action="">
+            <p class="modal-tweet-form-title">ハッシュタグ</p>
+            <select name="hashtag" class="modal-tweet-form-select">
+              <option value="1">食事</option>
+              <option value="2">スポーツ</option>
+              <option value="3">音楽</option>
+              <option value="4">ファッション</option>
+              <option value="5">お酒</option>
+              <option value="6">旅行</option>
+              <option value="7">学習</option>
+            </select>
+            <p class="modal-tweet-form-title">今なにしてる？</p>
+            <textarea class="modal-tweet-form-textarea" rows="8">こんにちは。お腹すきました。ご飯いきましょう。</textarea>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn modal-close-btn" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn modal-update-btn">更新する</button>
+      </div>
+    </div>
+  </div>
+</div>

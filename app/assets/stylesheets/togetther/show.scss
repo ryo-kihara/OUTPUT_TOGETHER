@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../variables';
 @import 'side_hashtag';
 @import 'side_rank';
 
@@ -57,6 +57,7 @@
       }
     }
     &-trust {
+      color: $trust-color;
       &-btn {
         position: relative;
         top: 8px;

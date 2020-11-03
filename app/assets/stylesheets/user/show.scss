@@ -1,0 +1,280 @@
+@import '../variables';
+
+.user {
+  &-info {
+    display: flex;
+    flex-direction: column;
+    &-wrapper {
+      border: 1px solid $default-border;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    &-link {
+      display: inline-block;
+      width: auto;
+      margin: 0 auto;
+    }
+    &-avatar {
+      width: 90px;
+      margin: 0 auto;
+      &-link:hover + .user-info-name-link {
+        color: $theme-color;
+        text-decoration: underline;
+      }
+    }
+    &-name {
+      &-link {
+        margin-top: 5px;
+        font-size: 18px;
+        color: black;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+    &-update {
+      &-btn {
+        margin-top: 10px;
+        border: 1px solid $default-border;
+        border-radius: 10px;
+        padding: 8px 16px;
+        &:hover {
+          border: 1px solid $theme-color;
+          background-color: $theme-color;
+          color: #fff;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    &-count {
+      margin-top: 30px;
+      & * {
+        margin-bottom: 4px;
+      }
+    }
+  }
+  &-main {
+    display: flex;
+    padding: 10px;
+    border: 1px solid $default-border;
+    &:hover {
+      background-color:rgba($color: $theme-color, $alpha: 0.1);
+    }
+    &:not(:last-of-type) {
+      border-bottom: none;
+    }
+    &-filter {
+      display: flex;
+      &-title {
+        text-align: center;
+        margin-left: 16px;
+        font-size: 20px;
+        color: $default-color;
+        &:hover {
+          text-decoration: none;
+          color: $theme-color;
+        }
+        &.selected {
+          color: $theme-color;
+          border-bottom: 2px solid $theme-color;
+        }
+      }
+    }
+    &-user {
+      &-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &-wrapper {
+          margin-right: 10px;
+        }
+      }
+      &-name {
+        margin: 0;
+        font-size: 18px;
+        color: black;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      vertical-align: middle;
+      align-items: center;
+    }
+    &-info {
+      width: 100%;
+    }
+    &-hashtag {
+      color: $default-color;
+      border: 1px solid $default-border;
+      border-radius: 20px;
+      padding: 2px 30px;
+      &:hover {
+        background-color: $theme-color;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid $theme-color;
+      }
+    }
+    &-content {
+      color: black;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+    &-heart {
+      color: $heart-color;
+    }
+    &-comment {
+      color: $comment-color;
+    }
+    &-edit {
+      color: $edit-color;
+      cursor: pointer;
+      &-btn {
+        border: none;
+        background: none;
+        padding: 0;
+        margin-left: 10px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    &-trust {
+      color: $trust-color;
+      cursor: pointer;
+    }
+    &-count {
+      margin-top: 2px;
+      & *:not(:first-of-type) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.modal {
+  &-user {
+    &-img {
+      width: 100px;
+      &-wrapper {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+      }
+      &-input {
+        display: none;
+      }
+      &-label {
+        margin-top: 10px;
+        padding: 5px 40px;
+        border: 1px solid $default-border;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          transition: 0.2s;
+          background-color: $theme-color;
+          color: #fff;
+          border: 1px solid $theme-color;
+        }
+      }
+    }
+    &-name {
+      &-wrapper {
+        margin-top: 20px;
+      }
+      &-title {
+        margin-bottom: 5px;
+      }
+      &-input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid $default-border;
+        border-radius: 8px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+    }
+  }
+  &-close {
+    &-btn {
+      background-color: $default-border;
+      color: #fff;
+      &:hover {
+        transition: 0.4s;
+        color: #fff;
+        filter: brightness(90%);
+      }
+    }
+  }
+  &-update {
+    &-btn {
+      background-color: $theme-color;
+      color: #fff;
+      &:hover {
+        transition: 0.4s;
+        color: #fff;
+        filter: brightness(90%);
+      }
+    }
+  }
+  &-close {
+    &:focus {
+      outline: none;
+    }
+  }
+  &-tweet {
+    &-wrapper {
+      width: 90%;
+      margin: 0 auto;
+    }
+    &-form {
+      &-title {
+        font-size: 20px;
+      }
+      &-select {
+        width: 100%;
+        padding: 16px 10px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+      &-textarea {
+        width: 100%;
+        resize: none;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 12px 14px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+      &-btn {
+        display: block;
+        width: 150px;
+        margin-left: auto;
+        padding: 12px 20px;
+        border: none;
+        color: #fff;
+        background-color: $theme-color;
+        border-radius: 10px;
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
