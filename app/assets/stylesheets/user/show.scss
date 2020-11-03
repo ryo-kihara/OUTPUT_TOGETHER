@@ -138,6 +138,15 @@
     &-edit {
       color: $edit-color;
       cursor: pointer;
+      &-btn {
+        border: none;
+        background: none;
+        padding: 0;
+        margin-left: 10px;
+        &:focus {
+          outline: none;
+        }
+      }
     }
     &-trust {
       color: $trust-color;
@@ -222,6 +231,50 @@
   &-close {
     &:focus {
       outline: none;
+    }
+  }
+  &-tweet {
+    &-wrapper {
+      width: 90%;
+      margin: 0 auto;
+    }
+    &-form {
+      &-title {
+        font-size: 20px;
+      }
+      &-select {
+        width: 100%;
+        padding: 16px 10px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+      &-textarea {
+        width: 100%;
+        resize: none;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 12px 14px;
+        &:focus {
+          outline: none;
+          border: 1px solid $theme-color;
+        }
+      }
+      &-btn {
+        display: block;
+        width: 150px;
+        margin-left: auto;
+        padding: 12px 20px;
+        border: none;
+        color: #fff;
+        background-color: $theme-color;
+        border-radius: 10px;
+        margin-bottom: 28px;
+      }
     }
   }
 }

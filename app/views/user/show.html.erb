@@ -44,7 +44,9 @@
           <div class="user-main-count">
             <i class="far fa-heart user-main-heart"></i> 12
             <i class="far fa-comment-alt user-main-comment"></i> 12
-            <i class="fas fa-pencil-alt user-main-edit"></i>
+            <button id="tweet_update_btn" class="user-main-edit-btn" data-toggle="modal" data-target="#tweet_update_modal">
+              <i class="fas fa-pencil-alt user-main-edit"></i>
+            </button>
             <i class="fas fa-trash-alt user-main-trust"></i>
           </div>
           <span class="user-main-date">2020-10-13 21:00:12</span>
@@ -282,6 +284,42 @@
         <div class="modal-user-name-wrapper">
           <p class="modal-user-name-title">ユーザー名を変更する</p>
           <input type="text" name="name" value="木原凌" class="modal-user-name-input">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn modal-close-btn" data-dismiss="modal">閉じる</button>
+        <button type="button" class="btn modal-update-btn">更新する</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ユーザー情報更新モーダル -->
+<div class="modal fade" id="tweet_update_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">投稿内容更新</h5>
+        <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tweet-wrapper">
+          <form action="">
+            <p class="modal-tweet-form-title">ハッシュタグ</p>
+            <select name="hashtag" class="modal-tweet-form-select">
+              <option value="1">食事</option>
+              <option value="2">スポーツ</option>
+              <option value="3">音楽</option>
+              <option value="4">ファッション</option>
+              <option value="5">お酒</option>
+              <option value="6">旅行</option>
+              <option value="7">学習</option>
+            </select>
+            <p class="modal-tweet-form-title">今なにしてる？</p>
+            <textarea class="modal-tweet-form-textarea" rows="8">こんにちは。お腹すきました。ご飯いきましょう。</textarea>
+          </form>
         </div>
       </div>
       <div class="modal-footer">
