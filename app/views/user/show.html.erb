@@ -2,6 +2,10 @@
   <%= stylesheet_link_tag 'user/show' %>
 <% end %>
 
+<% content_for :js do %>
+  <%= javascript_include_tag 'user/show' %>
+<% end %>
+
 <div class="col-3">
   <div class="user-info-wrapper">
     <div class="user-info">

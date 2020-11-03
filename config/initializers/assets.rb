@@ -18,4 +18,6 @@ Rails.application.config.assets.precompile += %w(
   togetther/index.css
   togetther/show.css
   user/show.css
+  application.js
+  user/show.js
 )
