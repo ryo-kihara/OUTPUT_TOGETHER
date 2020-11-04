@@ -16,15 +16,74 @@ header {
 }
 
 .header {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
   &-logo {
     font: bold 24px "Bangla MN";
-    vertical-align: middle;
     text-decoration: none;
     color: #fff;
-    vertical-align: text-top;
+    margin-top: 6px;
     &:hover {
       text-decoration: none;
       color: #fff;
+    }
+  }
+  &-search {
+    &-form {
+      margin-left: 40px;
+    }
+    &-input {
+      width: 200px;
+      font-size: 14px;
+      padding: 4px;
+      padding-left: 8px;
+      border: 1px solid $default-border;
+      border-radius: 5px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &-info {
+    position: relative;
+    left: 50%;
+    &-create {
+      margin-right: 40px;
+      color: #fff;
+      font-size: 20px;
+      background-color: #3f9200;
+      padding: 8px 24px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 4px;
+      &-icon {
+        margin-right: 5px;
+      }
+      &:hover {
+        text-decoration: none;
+        transition: 0.4s;
+        color: #fff;
+        filter: brightness(90%);
+      }
+    }
+    &-logout {
+      margin-left: 12px;
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+        transition: 0.4s;
+        color: #3f9200;
+        filter: brightness(90%);
+      }
+    }
+    &-user {
+      &-link {
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
   }
 }
