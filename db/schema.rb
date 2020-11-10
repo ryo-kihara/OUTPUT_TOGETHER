@@ -13,12 +13,28 @@
 ActiveRecord::Schema.define(version: 2020_11_09_120913) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id"
     t.string "contents", limit: 140, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at"
-    t.index ["user_id"], name: "index_tweets_on_user_id", unique: true
+    t.index ["user_id"], name: "index_tweets_on_user_id"
   end
 
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", limit: 30, null: false
+    t.string "avatar"
+    t.string "email", limit: 100
+    t.string "password_digest"
+    t.string "google_user_id", limit: 50
+    t.string "twitter_user_id", limit: 50
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["google_user_id"], name: "index_users_on_google_user_id", unique: true
+    t.index ["twitter_user_id"], name: "index_users_on_twitter_user_id", unique: true
+  end
+
+  add_foreign_key "tweets", "users"
 end
