@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_120913) do
+ActiveRecord::Schema.define(version: 2020_11_11_104603) do
+
+  create_table "hashtags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", limit: 50, null: false
+  end
+
+  create_table "tweet_hashtags", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tweet_id", null: false
+    t.bigint "hashtag_id", null: false
+    t.index ["hashtag_id"], name: "index_tweet_hashtags_on_hashtag_id"
+    t.index ["tweet_id", "hashtag_id"], name: "index_tweet_hashtags_on_tweet_id_and_hashtag_id", unique: true
+    t.index ["tweet_id"], name: "index_tweet_hashtags_on_tweet_id"
+  end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "user_id"
@@ -36,5 +48,7 @@ ActiveRecord::Schema.define(version: 2020_11_09_120913) do
     t.index ["twitter_user_id"], name: "index_users_on_twitter_user_id", unique: true
   end
 
+  add_foreign_key "tweet_hashtags", "hashtags", on_delete: :cascade
+  add_foreign_key "tweet_hashtags", "tweets", on_delete: :cascade
   add_foreign_key "tweets", "users"
 end
