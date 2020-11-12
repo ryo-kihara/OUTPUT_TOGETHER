@@ -1,5 +1,5 @@
 10.times do |n|
-  User.create(
+  User.create!(
     name: Faker::Name.name,
     avatar: Faker::Avatar.image,
     email: Faker::Internet.email,
