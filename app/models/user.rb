@@ -5,5 +5,5 @@ class User < ApplicationRecord
   has_many :tweets
   has_many :comments
   has_many :likes
-  has_many :favorites, through: :likes, source: :tweet
+  has_many :favorites, through: :tweets, source: :likes
 end
