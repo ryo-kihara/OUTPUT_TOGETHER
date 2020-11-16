@@ -1,4 +1,4 @@
-10.times do |n|
+10.times do
   User.create!(
     name: Faker::Name.name,
     avatar: Faker::Avatar.image,

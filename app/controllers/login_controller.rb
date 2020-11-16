@@ -1,9 +1,5 @@
 class LoginController < ApplicationController
+  def login; end
 
-    def login
-    end
-
-    def register
-    end
-
-  end
+  def register; end
+end
