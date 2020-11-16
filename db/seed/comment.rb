@@ -1,4 +1,4 @@
-100.times do |n|
+100.times do 
     Comment.create!(
         user_id: rand(1..10),
         tweet_id: rand(1..50),
