@@ -33,6 +33,8 @@ gem 'jquery-rails'
 gem 'paranoia'
 gem 'bcrypt'
 gem 'faker'
+gem 'dotenv-rails'
+gem 'omniauth-twitter'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
