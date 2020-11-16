@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 2020_11_11_143245) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "hashtags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name", limit: 50, null: false
+  end
+
   create_table "likes", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tweet_id", null: false
     t.bigint "user_id", null: false
@@ -32,8 +36,16 @@ ActiveRecord::Schema.define(version: 2020_11_11_143245) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
+  create_table "tweet_hashtags", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tweet_id", null: false
+    t.bigint "hashtag_id", null: false
+    t.index ["hashtag_id"], name: "index_tweet_hashtags_on_hashtag_id"
+    t.index ["tweet_id", "hashtag_id"], name: "index_tweet_hashtags_on_tweet_id_and_hashtag_id", unique: true
+    t.index ["tweet_id"], name: "index_tweet_hashtags_on_tweet_id"
+  end
+
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.string "contents", limit: 140, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -60,5 +72,7 @@ ActiveRecord::Schema.define(version: 2020_11_11_143245) do
   add_foreign_key "comments", "users", on_delete: :cascade
   add_foreign_key "likes", "tweets", on_delete: :cascade
   add_foreign_key "likes", "users", on_delete: :cascade
-  add_foreign_key "tweets", "users"
+  add_foreign_key "tweet_hashtags", "hashtags", on_delete: :cascade
+  add_foreign_key "tweet_hashtags", "tweets", on_delete: :cascade
+  add_foreign_key "tweets", "users", on_delete: :cascade
 end
