@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 2020_11_11_143245) do
     t.string "name", limit: 50, null: false
   end
 
+  create_table "hashtags_tweets", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "tweet_id", null: false
+    t.bigint "hashtag_id", null: false
+    t.index ["hashtag_id"], name: "index_hashtags_tweets_on_hashtag_id"
+    t.index ["tweet_id", "hashtag_id"], name: "index_hashtags_tweets_on_tweet_id_and_hashtag_id", unique: true
+    t.index ["tweet_id"], name: "index_hashtags_tweets_on_tweet_id"
+  end
+
   create_table "likes", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.bigint "tweet_id", null: false
     t.bigint "user_id", null: false
@@ -34,14 +42,6 @@ ActiveRecord::Schema.define(version: 2020_11_11_143245) do
     t.index ["tweet_id", "user_id"], name: "index_likes_on_tweet_id_and_user_id", unique: true
     t.index ["tweet_id"], name: "index_likes_on_tweet_id"
     t.index ["user_id"], name: "index_likes_on_user_id"
-  end
-
-  create_table "tweet_hashtags", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.bigint "tweet_id", null: false
-    t.bigint "hashtag_id", null: false
-    t.index ["hashtag_id"], name: "index_tweet_hashtags_on_hashtag_id"
-    t.index ["tweet_id", "hashtag_id"], name: "index_tweet_hashtags_on_tweet_id_and_hashtag_id", unique: true
-    t.index ["tweet_id"], name: "index_tweet_hashtags_on_tweet_id"
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -70,9 +70,9 @@ ActiveRecord::Schema.define(version: 2020_11_11_143245) do
 
   add_foreign_key "comments", "tweets", on_delete: :cascade
   add_foreign_key "comments", "users", on_delete: :cascade
+  add_foreign_key "hashtags_tweets", "hashtags", on_delete: :cascade
+  add_foreign_key "hashtags_tweets", "tweets", on_delete: :cascade
   add_foreign_key "likes", "tweets", on_delete: :cascade
   add_foreign_key "likes", "users", on_delete: :cascade
-  add_foreign_key "tweet_hashtags", "hashtags", on_delete: :cascade
-  add_foreign_key "tweet_hashtags", "tweets", on_delete: :cascade
   add_foreign_key "tweets", "users", on_delete: :cascade
 end

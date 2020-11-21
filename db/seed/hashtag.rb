@@ -1,0 +1,7 @@
+Hashtag.create!(name:"食事")
+Hashtag.create!(name:"スポーツ")
+Hashtag.create!(name:"音楽")
+Hashtag.create!(name:"ファッション")
+Hashtag.create!(name:"お酒")
+Hashtag.create!(name:"旅行")
+Hashtag.create!(name:"学習")
