@@ -9,4 +9,4 @@
 require './db/seed/user.rb'
 require './db/seed/tweet.rb'
 require './db/seed/hashtag.rb'
-require './db/seed/tweet_hashtag.rb'
+require './db/seed/hashtags_tweet.rb'

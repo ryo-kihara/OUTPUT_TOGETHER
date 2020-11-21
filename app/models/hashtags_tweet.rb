@@ -1,0 +1,2 @@
+class HashtagsTweet < ApplicationRecord
+end

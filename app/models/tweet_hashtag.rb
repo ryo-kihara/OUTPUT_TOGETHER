@@ -1,2 +1,0 @@
-class TweetHashtag < ApplicationRecord
-end
